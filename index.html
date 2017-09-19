@@ -350,8 +350,8 @@
             </div>
             <div class="swiper-slide">
                 <p>我最喜欢的一张</p>
-                <p class="ani" swiper-animate-effect="flipInY" swiper-animate-duration="0.9s" swiper-animate-delay="0.4s">
-                    <img src="img/2.jpg" alt="">
+                <p class="ani" swiper-animate-effect="rollIn" swiper-animate-duration="0.9s" swiper-animate-delay="0.4s">
+                    <img src="img/01.JPG" alt="">
                 </p>
             </div>
             <div class="swiper-slide">
@@ -388,7 +388,7 @@
 
 
     </div>
-    <audio  id="music"  autoplay></audio>
+    <audio id="music" autoplay></audio>
     <script>
 
 
@@ -399,6 +399,8 @@
                 $('#music').attr({
                     src:'music/谭维维-如果有来生.mp3'
                 })
+                var mAudio=$('audio')[0];
+                mAudio.play();
             }
 
             var docE1 = doc.documentElement,
