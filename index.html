@@ -254,7 +254,7 @@
             width: 0.6rem;
             height: 0.6rem;
             border-radius: 50%;
-            border: 1px solid #0cc240;
+            border: 1px dashed #0cc240;
             border-right:1px solid #0D1635;
             animation: move ease 1.8s infinite;
         }
@@ -388,7 +388,7 @@
 
 
     </div>
-    <audio id="music" autoplay loop>
+    <audio id="music" src="music/谭维维-如果有来生.mp3" autoplay loop>
 
     </audio>
     <script>
@@ -404,8 +404,7 @@
 
 
             }
-
-            var mAudio=$('audio')[0];
+            
 
             var docE1 = doc.documentElement,
                 resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
@@ -420,8 +419,6 @@
             doc.addEventListener('DOMContentLoaded',recalc,false);
 
 
-            mAudio.pause();
-            mAudio.play();
         })(document,window);
 
 
