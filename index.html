@@ -404,7 +404,7 @@
 
 
             }
-            
+
 
             var docE1 = doc.documentElement,
                 resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
@@ -438,12 +438,12 @@
             var mAudio=$('audio')[0];
             if(mAudio.paused){
                 mAudio.play();
-                $('img').css('animation-play-state','running');
-                $('img').css('opacity','1');
+                $('#musicControl').css('animation-play-state','running');
+                $('#musicControl').css('opacity','1');
             }else {
                 mAudio.pause();
-                $('img').css('animation-play-state','paused');
-                $('img').css('opacity','.5');
+                $('#musicControl').css('animation-play-state','paused');
+                $('#musicControl').css('opacity','.5');
             }
         })
     </script>
