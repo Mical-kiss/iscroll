@@ -420,14 +420,17 @@
     <script>
 
 
-        (function(doc, win){
-            $('.bigContent').css({
-                display:'none'
-            })
 
-            $('#music').attr({
-                autoplay:'autoplay'
-            })
+        (function(doc, win){
+            window.onload=function () {
+                $('.bigContent').css({
+                    display:'none'
+                })
+
+                $('#music').attr({
+                    autoplay:'autoplay'
+                })
+            }
 
             var docE1 = doc.documentElement,
                 resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
