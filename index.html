@@ -177,7 +177,7 @@
             background: url("img/6.jpg");
             position: relative;
         }
-        .swiper-wrapper>div:nth-of-type(6) p{
+        .swiper-wrapper>div:nth-of-type(6) p:nth-of-type(1){
             position: absolute;
             top: 0;
             left: 0;
@@ -186,8 +186,17 @@
             margin:auto;
             width: 2.8rem;
             height:1.8rem;
-            /*line-height: 1rem;*/
             text-align: center;
+        }
+        .swiper-wrapper>div:nth-of-type(6) p:nth-of-type(2){
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin:auto;
+            width: 2.8rem;
+            height:1.8rem;
             border: 2px solid #000;
         }
 
@@ -258,16 +267,6 @@
 
     <div class="bigContent">
         <div class="content">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
         </div>
     </div>
 
@@ -371,6 +370,8 @@
                     <br>
                     Will you love, honor, comfort, and cherish him from this day forward, forsaking all others, keeping only unto her for as long as you both shall live?
                 </p>
+                <p class="ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.5s">
+                </p>
 
             </div>
         </div>
@@ -387,14 +388,8 @@
 
         (function(doc, win){
             window.onload=function () {
-                $('.bigContent').css({
-                    display:'none'
-                })
-
+                $('.bigContent').remove();
                 $('#music').attr({
-                    autoplay:'autoplay'
-                })
-                $('audio').attr({
                     src:'music/谭维维-如果有来生.mp3'
                 })
             }
