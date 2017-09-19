@@ -388,7 +388,9 @@
 
 
     </div>
-    <audio id="music" autoplay></audio>
+    <audio id="music" autoplay loop>
+
+    </audio>
     <script>
 
 
@@ -399,10 +401,12 @@
                 $('#music').attr({
                     src:'music/谭维维-如果有来生.mp3'
                 })
-                var mAudio=$('audio')[0];
-                mAudio.play();
+
+
             }
 
+            var mAudio=$('audio')[0];
+            
             var docE1 = doc.documentElement,
                 resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
                 recalc = function(){
@@ -414,6 +418,10 @@
             if (!doc.addEventListener) return;
             win.addEventListener(resizeEvt,recalc,false);
             doc.addEventListener('DOMContentLoaded',recalc,false);
+
+
+            mAudio.pause();
+            mAudio.play();
         })(document,window);
 
 
